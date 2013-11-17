@@ -4,7 +4,7 @@ package com.dstechsupport.game;
  * Hello world!
  *
  */
-public class TicTacToe.java 
+public class TicTacToe
 {
     public static void main( String[] args )
     {
