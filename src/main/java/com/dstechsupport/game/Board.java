@@ -1,4 +1,4 @@
-import Cell.java;
+package com.dstechsupport.game;
 
 public class Board
 {
