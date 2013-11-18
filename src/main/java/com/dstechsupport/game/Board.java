@@ -6,7 +6,7 @@ public class Board
 	int ROWS;
 	int COLUMNS;
 
-	public Board
+	public Board()
 	{
 
 	}
@@ -18,15 +18,15 @@ public class Board
 
 	public boolean hasWon( Symbol player )
 	{
-
+	return true;
 	}
 	
 	public boolean isDrawn()
 	{
-
+	return true;
 	}
 
-	public void updateCell ( int row, int column, Symbol s )
+	public void updateCell( int row, int column, Symbol s )
 	{
 
 	}
