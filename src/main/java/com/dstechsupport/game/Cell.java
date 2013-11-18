@@ -1,4 +1,4 @@
-import Symbol.java;
+package com.dstechsupport.game;
 
 public class Cell
 {

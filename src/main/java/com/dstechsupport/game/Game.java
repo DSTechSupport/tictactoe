@@ -1,6 +1,4 @@
-import Board.java;
-import Symbol.java;
-import GameState.java;
+package com.dstechsupport.game;
 
 public class Game 
 {
