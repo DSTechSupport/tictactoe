@@ -8,6 +8,6 @@ public class TicTacToe
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Welcome to this game of Tic Tac Toe!" );
     }
 }
