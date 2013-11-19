@@ -12,7 +12,11 @@ public class Game
 	}
 
 	//The main game loop
+<<<<<<< HEAD
 	public void  play()
+=======
+	public void play()
+>>>>>>> 1ae093707254082b8a0ff3f308b74d90b9fb913c
 	{
 	}
 
