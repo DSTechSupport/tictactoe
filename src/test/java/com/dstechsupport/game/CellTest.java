@@ -15,17 +15,24 @@ public class CellTest extends TestCase
 {
 	public void testCell()
 	{
-	    // create test class
+	    // create test instance
 	    Cell tester = new Cell( 1, 2 );
-	    tester.column = 1;
+
+	    // 
 
 	    assertEquals( "column initalized to 1", 1, tester.column );
 	    assertEquals( "row initalized to 2", 2, tester.row );
 	}
 
-	public void testUpdateCell()
+	public void testUpdateCellToCircle()
 	{
-	    assertTrue( true );
+	    // create test instance
+	    Cell tester = new Cell( 1, 1 );
+
+	    // change symbol to circle
+	    tester.updateCell( Symbol.CIRCLE );
+
+	    assertEquals( "cell's symbol should be circle", Symbol.CIRCLE, tester.content );
 	}
 
 
