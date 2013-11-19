@@ -33,12 +33,49 @@ public class BoardTest extends TestCase
 
 	public void testHasWon1()
 	{
-		
+	
+		//Testing winning conditions for horizontal row
+		Board tester = new Board();
+
+		tester.cells[0][0].content = Symbol.CROSS;
+		tester.cells[0][1].content = Symbol.CROSS;
+		tester.cells[0][2].content = Symbol.CROSS;
+
+		assertTrue( tester.hasWon( Symbol.CROSS ));		
 	}
+
+        public void testHasWon2()
+        {
+
+		//Testing winning conditions for diagonal row
+                Board tester = new Board();
+
+                tester.cells[0][0].content = Symbol.CROSS;
+                tester.cells[1][1].content = Symbol.CROSS;
+                tester.cells[2][2].content = Symbol.CROSS;
+
+                assertTrue( tester.hasWon( Symbol.CROSS ));
+        }
+
+        public void testHasWon3()
+        {
+
+		//Testing winning conditions for vertical row
+                Board tester = new Board();
+
+                tester.cells[0][1].content = Symbol.CROSS;
+                tester.cells[1][1].content = Symbol.CROSS;
+                tester.cells[2][1].content = Symbol.CROSS;
+
+                assertTrue( tester.hasWon( Symbol.CROSS ));
+        }
+
 
 	public void testIsDrawn()
 	{
-	
+			
+		
+
 	}
 
 	public void testUpdateCell()
