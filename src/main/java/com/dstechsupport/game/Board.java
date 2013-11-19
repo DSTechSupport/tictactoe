@@ -22,9 +22,24 @@ public class Board
 	
 	public void drawBoard()
 	{
+		System.out.println("-----------");
+		 for(int i = 0; i < ROWS; i++)
+                        {
+                                for(int j = 0; j < COLUMNS; j++)
+                                {
+                                        cells[i][j].draw();
+					System.out.println(".");
+					if( i < COLUMNS - 1 )
+					{
+						System.out.print("|");
+					}
+                                }
+                        }
+		System.out.println("-----------");
 
 	}
 
+	// Since there are only 8 possible ways of winning we list them all
 	public boolean hasWon( Symbol player )
 	{
 		if( cells[0][0].content == player && cells[1][0].content == player && cells[2][0].content == player )
