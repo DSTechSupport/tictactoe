@@ -112,6 +112,22 @@ public class BoardTest extends TestCase
 
 	public void testUpdateCell()
 	{
+	
+		Board tester = new Board();
+
+		tester.cells[0][0].content = Symbol.EMPTY;
+                tester.cells[0][1].content = Symbol.EMPTY;
+                tester.cells[0][2].content = Symbol.EMPTY;
+                tester.cells[1][0].content = Symbol.EMPTY;
+                tester.cells[1][1].content = Symbol.EMPTY;
+                tester.cells[1][2].content = Symbol.EMPTY;
+                tester.cells[2][0].content = Symbol.EMPTY;
+                tester.cells[2][1].content = Symbol.EMPTY;
+                tester.cells[2][2].content = Symbol.EMPTY;
+              	
+		tester.updateCell( 1, 1, Symbol.CROSS );
+		
+		assertEquals( "Middle cell should now be a cross" , Symbol.CROSS, tester.cells[1][1].content );
 
 	}
 }
