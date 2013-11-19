@@ -2,7 +2,7 @@ package com.dstechsupport.game;
 
 public class Board
 {
-	Cell[][] cells;
+	public Cell[][] cells;
 	public static final int ROWS = 3;
 	public static final int COLUMNS = 3;
 
