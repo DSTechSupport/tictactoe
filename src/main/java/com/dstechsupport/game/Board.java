@@ -9,7 +9,15 @@ public class Board
 
 	public Board()
 	{
-
+		cells = new Cell[ROWS][COLUMNS];
+		// Initializing Cells
+		for(int i = 0; i < ROWS; i++)
+			{
+				for(int j = 0; j < COLUMNS; j++)
+				{
+					cells[i][j] = new Cell(i,j);
+				}
+			}
 	}
 	
 	public void drawBoard()
