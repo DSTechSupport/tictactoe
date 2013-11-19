@@ -16,7 +16,10 @@ public class GameTest extends TestCase
 	
 	public void testGame()
 	{
-				
+		Game tester = new Game();
+
+		assertEquals( "Gamestate should be Playing", GameState.PLAYING, tester.gameState );
+		assertEquals( "Current player should be Cross", Symbol.CROSS, tester.currentPlayer );
 
 	}	
 
@@ -85,7 +88,7 @@ public class GameTest extends TestCase
 
 	        public void testUpdateGame4()
         {
-                //Create gameboard where Circle is winner
+                //Create gameboard where gamestate is Playing
                 Game tester = new Game();
 
                 tester.board.cells[0][0].content = Symbol.EMPTY;
