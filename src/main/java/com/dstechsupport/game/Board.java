@@ -67,6 +67,7 @@ public class Board
 	
 	public boolean isDrawn()
 	{
+	// We run through all the board and check indivitual cells if they are empty
 	                for( int i = 0; i < ROWS; i++ )
                         {
                                 for( int j = 0; j < COLUMNS; j++ )
@@ -83,6 +84,6 @@ public class Board
 
 	public void updateCell( int row, int column, Symbol s )
 	{
-
+		cells[row][column].content = s;
 	}
 }
