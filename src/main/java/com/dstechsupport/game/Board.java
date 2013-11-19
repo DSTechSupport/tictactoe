@@ -54,7 +54,7 @@ public class Board
 	        else if( cells[0][0].content == player && cells[1][1].content == player && cells[2][2].content == player )
 		{		
 			return true;
-		{
+		}
 		else if( cells[2][0].content == player && cells[1][1].content == player && cells[0][2].content == player )
 		{
 			return true;
@@ -63,7 +63,6 @@ public class Board
 		{
 			return false;
 		}
-		return false;
 	}
 	
 	public boolean isDrawn()
