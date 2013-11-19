@@ -73,10 +73,42 @@ public class BoardTest extends TestCase
 
 	public void testIsDrawn()
 	{
-			
-		
+	
+		Board tester = new Board();
+
+		tester.cells[0][0].content = Symbol.CROSS; 
+		tester.cells[0][1].content = Symbol.CROSS;
+		tester.cells[0][2].content = Symbol.CIRCLE;
+		tester.cells[1][0].content = Symbol.CIRCLE;
+		tester.cells[1][1].content = Symbol.CIRCLE;
+		tester.cells[1][2].content = Symbol.CROSS;
+		tester.cells[2][0].content = Symbol.CROSS;
+		tester.cells[2][1].content = Symbol.CIRCLE;
+		tester.cells[2][2].content = Symbol.CROSS;
+
+		assertTrue ( tester.isDrawn() );
 
 	}
+
+ 	public void testIsDrawn2()
+        {
+
+                Board tester = new Board();
+
+                tester.cells[0][0].content = Symbol.CROSS;
+                tester.cells[0][1].content = Symbol.CROSS;
+                tester.cells[0][2].content = Symbol.CIRCLE;
+                tester.cells[1][0].content = Symbol.CIRCLE;
+                tester.cells[1][1].content = Symbol.CIRCLE;
+                tester.cells[1][2].content = Symbol.CROSS;
+                tester.cells[2][0].content = Symbol.EMPTY;
+                tester.cells[2][1].content = Symbol.EMPTY;
+                tester.cells[2][2].content = Symbol.EMPTY;
+
+                assertFalse ( tester.isDrawn() );
+
+        }
+
 
 	public void testUpdateCell()
 	{
