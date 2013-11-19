@@ -1,6 +1,6 @@
 /*
 *
-* This test checks if cell does get the correct input and also if a cell is updated once it's been updated
+* This test checks are supposed to test the Tic Tac Toe Board
 *
 *
 */
@@ -11,7 +11,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-public Class BoardTest extends TestCase
+public class BoardTest extends TestCase
 {
 
 	public void testBoard()
@@ -19,21 +19,21 @@ public Class BoardTest extends TestCase
 	
 	    Board tester = new Board();
 
-		for( int i = 0 ; i < tester.ROWS; ROW++ )
-	       
+		for( int i = 0 ; i < tester.ROWS; i++ )	       
 		{
-			for( int j = 0 ; i < tester.COLUMNS; COLUMNS++ )
+			for( int j = 0 ; j < tester.COLUMNS; j++ )
 			{
-			assertEquals( "check that cell has correct coordinates", i, cells[i][j].row );
-			assertEquals( "check that cell has correct coordinates", j, cells[i][j].column );
-			assertEquals( "cell is empty", Symbol.EMPTY, cells[i][j].content );
+				Cell current = new Cell(i,j);
+				assertEquals( "check that cell has correct coordinates", i, tester.cells[i][j].row  );
+				assertEquals( "check that cell has correct coordinates", j, tester.cells[i][j].column );
+				assertEquals( "cell is empty", Symbol.EMPTY, tester.cells[i][j].content );
 			}
 		}
 	}
 
 	public void testHasWon1()
 	{
-
+		
 	}
 
 	public void testIsDrawn()
