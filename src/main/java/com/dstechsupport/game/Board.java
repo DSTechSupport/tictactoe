@@ -67,7 +67,18 @@ public class Board
 	
 	public boolean isDrawn()
 	{
-	return true;
+	                for( int i = 0; i < ROWS; i++ )
+                        {
+                                for( int j = 0; j < COLUMNS; j++ )
+                                {
+					if( cells[i][j].content == Symbol.EMPTY )
+					{
+						return false;
+					}
+                                }
+                        }
+		return true;
+		
 	}
 
 	public void updateCell( int row, int column, Symbol s )
