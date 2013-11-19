@@ -12,7 +12,7 @@ public class Game
 	}
 
 	//The main game loop
-	public play()
+	public void play()
 	{
 	}
 
