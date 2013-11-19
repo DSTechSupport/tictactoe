@@ -35,6 +35,18 @@ public class CellTest extends TestCase
 	    assertEquals( "cell's symbol should be circle", Symbol.CIRCLE, tester.content );
 	}
 
+	public void testUpdateCellToCross()
+        {
+            // create test instance
+            Cell tester = new Cell( 1, 1 );
+
+            // change symbol to circle
+            tester.updateCell( Symbol.CROSS );
+
+            assertEquals( "cell's symbol should be cross", Symbol.CROSS, tester.content );
+        }
+
+
 
 
 
