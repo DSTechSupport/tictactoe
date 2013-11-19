@@ -8,11 +8,11 @@ public class Game
 
 	public Game()
 	{
-
+		board = new Board();
 	}
 
 	//The main game loop
-	public play()
+	public void  play()
 	{
 	}
 
@@ -23,8 +23,26 @@ public class Game
 	}
 
 	//Check for win/draw conditions and update the gamestate
-	public void updateGame( Symbol player  )
+	public void updateGame( Symbol player )
 	{
-
+		if( board.hasWon( player ) )
+		{
+			if( player == Symbol.CIRCLE )
+			{
+				gameState = GameState.CIRLCE_WON;
+			}
+			else // (player == Symbol.CROSS)
+			{
+				gameState = GameState.CROSS_WON;
+			}
+		}
+		else if( board.isDrawn() )
+		{
+			gameState = GameState.DRAW;
+		}
+		else
+		{
+			return;
+		}
 	}	
 }
