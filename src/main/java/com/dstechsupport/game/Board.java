@@ -22,20 +22,26 @@ public class Board
 	
 	public void drawBoard()
 	{
-		System.out.println("-----------");
+		System.out.println("---------------");
 		 for(int i = 0; i < ROWS; i++)
                         {
-                                for(int j = 0; j < COLUMNS; j++)
+                         
+
+			 for(int j = 0; j < COLUMNS; j++)
                                 {
-                                        cells[i][j].draw();
-					System.out.println(".");
+                                //        cells[i][j].draw();
+					System.out.print("|");
+					cells[i][j].draw();
+					System.out.print("|");
+
 					if( i < COLUMNS - 1 )
 					{
-						System.out.print("|");
+			
 					}
                                 }
+				System.out.print("\n");
                         }
-		System.out.println("-----------");
+		System.out.println("---------------");
 
 	}
 
