@@ -2,7 +2,7 @@ package com.dstechsupport.game;
 
 public class Cell
 {
-	Symbol content;
+	public Symbol content;
 	public int column;
 	public int row;
 
@@ -20,6 +20,18 @@ public class Cell
 	
 	public void draw()
 	{
+		if( content  == Symbol.CIRCLE )
+		{
+			System.out.println(" O ");
+		}
+		else if ( content == Symbol.CROSS )
+		{
+			System.out.println(" X ");
+		}
+		else //content is empty
+		{
+			System.out.println("   ");
+		}
 	
 	}
 }
