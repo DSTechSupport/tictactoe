@@ -6,7 +6,7 @@ public class Cell
 	public int column;
 	public int row;
 
-	public void Cell( int column, int row )
+	public Cell( int column, int row )
 	{
 	
 	}
