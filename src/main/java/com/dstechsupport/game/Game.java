@@ -11,6 +11,8 @@ public class Game
 	public Game()
 	{
 		board = new Board();
+		currentPlayer = Symbol.CROSS;
+		gameState = GameState.PLAYING;
 	}
 
 	//The main game loop
@@ -80,10 +82,13 @@ public class Game
 			chosenRow = in.nextInt() - 1;
 			chosenColumn = in.nextInt() - 1;
 			//Checking if the user input is correct and if the cell he picked is availabl
-			if( chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2 && board.cells[chosenRow][chosenColumn].content == Symbol.EMPTY )
+			if( chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2 )
 			{
 				System.out.println("Row or column input illegal, must be between 1 and 3. Try again.");
-
+			}
+			else if( !( board.cells[chosenRow][chosenColumn].content == Symbol.EMPTY ) )
+			{
+				System.out.println( "The cell you chose already contains a symbol, please select another." );
 			}
 			else
 			{
