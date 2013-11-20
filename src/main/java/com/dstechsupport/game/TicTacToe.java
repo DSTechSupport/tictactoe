@@ -30,11 +30,11 @@ public class TicTacToe
         });
 
 
-        System.out.println( "Welcome to this game of Tic Tac Toe!" );
+        //System.out.println( "Welcome to this game of Tic Tac Toe!" );
 
-	Game game = new Game();
+	//Game game = new Game();
 
-	game.play();
+	//game.play();
 
 
     }
