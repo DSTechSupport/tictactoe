@@ -38,7 +38,7 @@ public class GameTest extends TestCase
                 tester.board.cells[2][1].content = Symbol.CIRCLE;
                 tester.board.cells[2][2].content = Symbol.CROSS;
 		
-		tester.updateGame( tester.currentPlayer );
+		tester.updateGame( Symbol.CROSS );
 
 		assertEquals( "Gamestate should be draw", GameState.DRAW, tester.gameState );
 
@@ -59,7 +59,7 @@ public class GameTest extends TestCase
                 tester.board.cells[2][1].content = Symbol.CIRCLE;
                 tester.board.cells[2][2].content = Symbol.CROSS;
 
-		tester.updateGame( tester.currentPlayer );
+		tester.updateGame( Symbol.CROSS   );
 
                 assertEquals( "Gamestate should be Cross won", GameState.CROSS_WON, tester.gameState );
 
@@ -80,7 +80,7 @@ public class GameTest extends TestCase
                 tester.board.cells[2][1].content = Symbol.CIRCLE;
                 tester.board.cells[2][2].content = Symbol.CROSS;
 
-		tester.updateGame( tester.currentPlayer );
+		tester.updateGame( Symbol.CIRCLE );
 
                 assertEquals( "Gamestate should be Circle won", GameState.CIRCLE_WON, tester.gameState );
 
@@ -101,7 +101,7 @@ public class GameTest extends TestCase
                 tester.board.cells[2][1].content = Symbol.EMPTY;
                 tester.board.cells[2][2].content = Symbol.EMPTY;
 
-                tester.updateGame( tester.currentPlayer );
+                tester.updateGame( Symbol.CROSS  );
 
                 assertEquals( "Gamestate should be Playing", GameState.PLAYING, tester.gameState );
 
