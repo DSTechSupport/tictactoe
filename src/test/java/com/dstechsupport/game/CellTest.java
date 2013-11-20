@@ -20,8 +20,8 @@ public class CellTest extends TestCase
 
 	    // 
 
-	    assertEquals( "column initalized to 1", 1, tester.column );
-	    assertEquals( "row initalized to 2", 2, tester.row );
+	    assertEquals( "column initalized to 2", 2, tester.column );
+	    assertEquals( "row initalized to 1", 1, tester.row );
 	}
 
 	public void testUpdateCellToCircle()
