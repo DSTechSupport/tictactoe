@@ -29,7 +29,7 @@ public class Game
 			board.drawBoard();
 
 			//update gamestate
-			this.updateState( currentPlayer );
+			updateGame( currentPlayer );
 
 			//output message if victory or draw has occured
 
