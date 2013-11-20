@@ -21,44 +21,37 @@ public class Game
 	//Take input from player and update the board
 	public void makeMove( Symbol player )
 	{
-		int chosenRow;
-		int chosenColumn;
+		int chosenRow = 0;
+		int chosenColumn = 0;
+		boolean wrongInput = true;
 		Scanner in = new Scanner(System.in);
-
-		if(player == Symbol.CIRCLE)
+		do
 		{
-			System.out.print("CIRCLE´S TURN");
-			do
+			if(player == Symbol.CIRCLE)
 			{
+				System.out.println("CIRCLE´S TURN");
+			}
+			else
+			{
+				System.out.println("CROSS' TURN");
+			}
 
 			System.out.print("Select row first, column second");
-			chosenRow = in.nextInt();
-			chosenColumn = in.nextInt();
-			chosenRow = chosenRow - 1;
-			chosenColumn = chosenColumn - 1;
-			System.out.println("Row or column input illegal, must be between 1 and 3. Try again.");
-	
-			}while(chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2);
-		}
-		else // Player symbol is CROSS
-		{
-                if(player == Symbol.CROSS)
-                {
-                        System.out.print("CROSS' TURN");
-                        do
-                        {
+			chosenRow = in.nextInt() - 1;
+			chosenColumn = in.nextInt() - 1
+			//Checking if the user input is correct and if the cell he picked is available	
+			if( chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2 && board.cells[chosenRow][chosenColumn].content == Symbol.EMPTY )
+			{
+				board.cells[chosenRow][chosenColumn].content = player; //Update the cell
+				wrongInput = false;
 
-                        System.out.print("Select row first, column second");
-                        chosenRow = in.nextInt();
-                        chosenColumn = in.nextInt();
-			chosenRow = chosenRow - 1;
-                        chosenColumn = chosenColumn - 1;
-                        System.out.println("Row or column input illegal, must be between 1 and 3. Try again.");
+			}
+			else
+			{
+				System.out.println("Row or column input illegal, must be between 1 and 3. Try again.");
+			}
 
-                        }while(chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2);
-
-		}
-	   }
+		}while(wrongInput == true);
 	}
 
 	//Check for win/draw conditions and update the gamestate
