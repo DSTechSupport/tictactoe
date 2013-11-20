@@ -6,7 +6,7 @@ public class Cell
 	public int column;
 	public int row;
 
-	public Cell( int _column, int _row )
+	public Cell( int _row, int _column )
 	{
 	    content = Symbol.EMPTY;
 	    column = _column;
@@ -22,15 +22,15 @@ public class Cell
 	{
 		if( content  == Symbol.CIRCLE )
 		{
-			System.out.println(" O ");
+			System.out.print(" O ");
 		}
 		else if ( content == Symbol.CROSS )
 		{
-			System.out.println(" X ");
+			System.out.print(" X ");
 		}
 		else //content is empty
 		{
-			System.out.println("   ");
+			System.out.print("   ");
 		}
 	
 	}
