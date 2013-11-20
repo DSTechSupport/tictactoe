@@ -16,6 +16,46 @@ public class Game
 	//The main game loop
 	public void play()
 	{
+		//draw initial board
+		board.drawBoard();
+
+		//game loop
+		while( gameState == GameState.PLAYING  )
+		{
+			//have current player make a move
+			makeMove( currentPlayer  );
+
+			//draw the board
+			board.drawBoard();
+
+			//update gamestate
+			this.updateState( currentPlayer );
+
+			//output message if victory or draw has occured
+
+			if( gameState == GameState.DRAW )
+			{
+				System.out.println( "The game is drawn! Thanks for playing" );
+			}
+			else if( gameState == GameState.CROSS_WON  )
+			{
+				System.out.println( "Cross has won! Thanks for playing"  );
+			}
+			else if( gameState == GameState.CIRCLE_WON  )
+			{
+				System.out.println( "Circle has won! Thanks for playing"  );
+			}
+
+			//switch player
+			if( currentPlayer == Symbol.CROSS )
+			{
+				currentPlayer = Symbol.CIRCLE;
+			}
+			else
+			{
+				currentPlayer = Symbol.CROSS;
+			}
+		}
 	}
 
 	//Take input from player and update the board
@@ -38,17 +78,17 @@ public class Game
 
 			System.out.print("Select row first, column second");
 			chosenRow = in.nextInt() - 1;
-			chosenColumn = in.nextInt() - 1
-			//Checking if the user input is correct and if the cell he picked is available	
+			chosenColumn = in.nextInt() - 1;
+			//Checking if the user input is correct and if the cell he picked is availabl
 			if( chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2 && board.cells[chosenRow][chosenColumn].content == Symbol.EMPTY )
 			{
-				board.cells[chosenRow][chosenColumn].content = player; //Update the cell
-				wrongInput = false;
+				System.out.println("Row or column input illegal, must be between 1 and 3. Try again.");
 
 			}
 			else
 			{
-				System.out.println("Row or column input illegal, must be between 1 and 3. Try again.");
+				board.cells[chosenRow][chosenColumn].content = player; //Update the cell
+                                wrongInput = false;
 			}
 
 		}while(wrongInput == true);
