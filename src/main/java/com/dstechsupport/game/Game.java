@@ -78,10 +78,14 @@ public class Game
 				System.out.println("CROSS' TURN");
 			}
 
-			System.out.print("Select row first, column second");
+			System.out.print("Select row first, column second\n");
+			System.out.print("Row: ");
 			chosenRow = in.nextInt() - 1;
+			System.out.print("Column: ");
 			chosenColumn = in.nextInt() - 1;
-			//Checking if the user input is correct and if the cell he picked is availabl
+			System.out.println();
+
+			//Checking if the user input is correct and if the cell he picked is available
 			if( chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2 )
 			{
 				System.out.println("Row or column input illegal, must be between 1 and 3. Try again.");
