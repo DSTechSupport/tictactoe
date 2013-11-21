@@ -1,13 +1,23 @@
-table
-{
+table{
+	margin-top: 300px;
+	margin-left: auto;
+	margin-right: auto;
+        width: 50px;
+        border-collapse:collapse;
+}
+
+
+.smjee{
+        border-bottom: 1px solid black;
+}
+
+
+button{  
+	height: 50px;
 	width: 50px;
-	border-collapse:collapse;
 }
-table,th,td
-{
-	border: 1px solid black;
+
+.right{
+	border-right: 1px solid black;
 }
-th
-{
-	height:50px;
-}
+
