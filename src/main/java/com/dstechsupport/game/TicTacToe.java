@@ -5,7 +5,7 @@ import spark.*;
 
 /**
  *
- * Hello world! billy bob
+ * Hello world! Gary Busey
  *
  */
 public class TicTacToe
