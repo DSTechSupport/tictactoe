@@ -1,4 +1,4 @@
-k$(document).ready(function() {
+$(document).ready(function() {
 	$("#tictactoe tr td").click(function ()
 	{
 		var cell = $(this).attr( 'id' );
