@@ -12,6 +12,7 @@ public class TicTacToe
 {
     public static void main( String[] args )
     {
+	staticFileLocation("/public");
 
 
         setPort(Integer.valueOf(System.getenv("PORT")));
