@@ -11,6 +11,6 @@ $(document).ready(function() {
 		{
 			$('#cell').html( data );
         	});
-		alert("SUCCESS");
+		alert(cell);
 	});
   });
