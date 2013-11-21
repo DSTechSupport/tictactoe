@@ -32,8 +32,7 @@ public class TicTacToe
         post(new Route("/play") {
             	@Override
             	public Object handle(Request request, Response response) {
-                	String cell  = request.queryParams("cell");
-                	return cell;
+                	return "hello " + request.queryParams("cell");
             	}
         });
        // System.out.println( "Welcome to this game of Tic Tac Toe!" );
