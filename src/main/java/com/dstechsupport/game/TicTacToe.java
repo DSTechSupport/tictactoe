@@ -16,8 +16,8 @@ public class TicTacToe
 
         setPort(Integer.valueOf(System.getenv("PORT")));
 
-      	Game game = new Game();
-	game.play();
+      	//Game game = new Game();
+	//game.play();
 
 
 
