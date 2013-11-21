@@ -4,13 +4,14 @@ $(document).ready(function() {
 		var cell = $(this).attr( 'id' );
 		$.ajax(
 		{
-			type: "GET",
+			type: "POST",
 			url: "/play",
 			data: 'cell=' + cell
         	}).done( function( data ) 
 		{
-			$('#cell').html( data );
+			$('#cell').html( "12" );
+			alert( data );
         	});
-		alert(cell);
+		
 	});
   });
