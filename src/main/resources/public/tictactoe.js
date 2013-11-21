@@ -7,10 +7,10 @@ $(document).ready(function() {
 			type: "GET",
 			url: "/play",
 			data: 'cell=' + cell
-        }).done( function( data ) 
+        	}).done( function( data ) 
 		{
 			$('#cell').html( data );
-        }).
+        	});
 		alert("SUCCESS");
 	});
   });
