@@ -1,2 +1,9 @@
 language: java
 jdk: openjdk7
+deploy:
+  provider: heroku
+  api_key:
+    secure: WJeYRe1APe2OAjsNR/5BiWNeRPpjpNEWXzUlCYJWiS7M5tkVKFpTB4xmyjYMlKM80fNEXhmankVXt8NZLrlkFioUWXyYeH6cjbK+qswDdcdKBS5GYbQE2MwdtudJC2iQQnEOUzUECCYIZWTRFNfnSGF1gJhTg2/FHEPT5ZwzS0w=
+  app: pacific-castle-1001
+  on:
+    repo: DSTechSupport/tictactoe
