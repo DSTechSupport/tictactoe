@@ -4,7 +4,7 @@ $(document).ready(function() {
 		var cell = $(this).attr( 'id' );
 		$.ajax(
 		{
-			type: GET,
+			type: "GET",
 			url: "/play",
 			data: 'cell=' + cell
         }).done( function( data ) 
