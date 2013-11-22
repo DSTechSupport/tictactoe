@@ -4,8 +4,6 @@ var currentPlayer = "X";
 $(document).ready(function() {
 	$("#tictactoe tr td").click(function ()
 	{
-		if( gameState == "playing"  )
-		{
 			var cell = this
 			var cellid =  $(this).attr( 'id' );
 			$.ajax( {
@@ -45,24 +43,6 @@ $(document).ready(function() {
 				}
 		
 			});
-		}
-		// if the game has ended
-                else
-                {
-                        if( results[3] == "xwins" )
-                        {
-                                alert( "CROSS WINS" );
-                        }
-                        else if( results[3] == "owins" )
-                        {
-                                alert( "CIRCLE WINS" );
-                        }
-                        else if( results[3] == "draw" )
-                        {
-                                alert( "GAME IS DRAWN" );
-                        }
-                }
-
 		
 	});
 });
