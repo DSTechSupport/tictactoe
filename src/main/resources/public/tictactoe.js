@@ -17,7 +17,7 @@ $(document).ready(function() {
 			//draw the current player
 			if( results[0] == 'done' )
 			{
-				&(this).html( currentPlayer );
+				$(this).html( currentPlayer );
 				currentPlayer = results[1];
 			}
 			else
