@@ -19,7 +19,7 @@ $(document).ready(function() {
 			if( results[0] == 'done' )
 			{
 				alert( "filling cell" );
-				$( cell ).html( currentPlayer );
+				$( cell ).children().html( currentPlayer );
 				currentPlayer = results[1];
 			}
 			else
