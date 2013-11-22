@@ -57,8 +57,10 @@ public class Game
 	//Take input from player and update the board
 	//updates the cell and returns true if the cell is empty
 	//returns false otherwise
-	public boolean makeMove( Symbol player, int chosenRow, int chosenColumn )
+	public boolean makeMove( Symbol player, int row, int column )
 	{
+		int chosenRow = row - 1;
+		int chosenColumn = column - 1;
 		//Checking if the user input is correct and if the cell he picked is available
 		if( chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2 )
 		{
