@@ -22,7 +22,6 @@ public class Game
 	//The main game loop
 	public JSONObject play( int row, int column )
 	{
-
 		//game loop
 		//have current player make a move
 		boolean success = makeMove( currentPlayer, row, column );
@@ -35,15 +34,17 @@ public class Game
 
 
 		//switch player
-		if( currentPlayer == Symbol.CROSS )
+		if( success )
 		{
-			currentPlayer = Symbol.CIRCLE;
+			if( currentPlayer == Symbol.CROSS )
+			{
+				currentPlayer = Symbol.CIRCLE;
+			}
+			else
+			{
+				currentPlayer = Symbol.CROSS;
+			}
 		}
-		else
-		{
-			currentPlayer = Symbol.CROSS;
-		}
-
 		//json object to display the game
 		JSONObject data = new JSONObject();
 		data.put( "currentPlayer", currentPlayer );
@@ -51,7 +52,6 @@ public class Game
 		data.put( "success", success );
 
 		return data;
-
 	}
 
 	//Take input from player and update the board
