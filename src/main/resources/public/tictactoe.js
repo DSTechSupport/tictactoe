@@ -18,7 +18,7 @@ $(document).ready(function() {
 			if( results[0] == 'done' )
 			{
 				alert( "filling cell" );
-				$(this).html( currentPlayer );
+				$( "#" + cell + " " +  button ).html( currentPlayer );
 				currentPlayer = results[1];
 			}
 			else
