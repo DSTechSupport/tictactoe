@@ -9,7 +9,7 @@ $(document).ready(function() {
 		$.ajax({
        	   	type: "post",
           	url: "/play",
-          	data: 'cell=' + cell
+          	data: 'cell=' + cellid
         	}).done( function( data ) {
 			alert( data );
 			var results = data.split(",");
