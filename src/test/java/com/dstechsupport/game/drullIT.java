@@ -25,8 +25,14 @@ public class drullIT {
   @Test
   public void titleShouldBeHelloWorld() throws Exception {
     driver.get(baseUrl);
-    assertEquals("joe noob", driver.getTitle());
+    assertEquals("smjee", driver.getTitle());
   }
+
+  @Test
+	public void titleShouldBeHelloWorld2() throws Exception {
+	driver.get(baseUrl);
+	assertEquals("smjeeeee", driver.getTitle());
+	}
 /*
   @After
   public void tearDown() throws Exception {
