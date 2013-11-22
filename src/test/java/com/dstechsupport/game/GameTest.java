@@ -44,9 +44,7 @@ public class GameTest extends TestCase
 	{
 		Game tester = new Game();
 
-		boolean result = tester.makeMove( Symbol.CIRCLE, 2, 2 );
-
-		assertFalse( result  );
+		assertFalse( tester.makeMove( Symbol.CIRCLE, 2, 2 )  );
 	}
 	//tests current player making a move
         public void testMakeMove2()
@@ -69,7 +67,7 @@ public class GameTest extends TestCase
 		boolean result = tester.makeMove( Symbol.CIRCLE, 1, 1 );
 
 		assertFalse( result );
-		assertEquals( " the top left cell should still be CROSS", Symbol.CROSS, tester.board.cells[0][0] );
+		assertEquals( " the top left cell should still be CROSS", Symbol.CROSS, tester.board.cells[0][0].content );
 	}
 
 
