@@ -21,3 +21,5 @@ before_install:
           - heroku keys:clear
           - yes | heroku keys:add
           - yes | git push -f heroku master
+script:
+bin/heroku_auth
