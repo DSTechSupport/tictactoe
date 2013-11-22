@@ -4,7 +4,8 @@ var currentPlayer = "X";
 $(document).ready(function() {
 	$("#tictactoe tr td").click(function ()
 	{
-		var cell = $(this).attr( 'id' );
+		var cell = this
+		var cellid =  $(this).attr( 'id' );
 		$.ajax({
        	   	type: "post",
           	url: "/play",
@@ -18,7 +19,7 @@ $(document).ready(function() {
 			if( results[0] == 'done' )
 			{
 				alert( "filling cell" );
-				$( "#" + cell + " " +  button ).html( currentPlayer );
+				$( cell ).html( currentPlayer );
 				currentPlayer = results[1];
 			}
 			else
