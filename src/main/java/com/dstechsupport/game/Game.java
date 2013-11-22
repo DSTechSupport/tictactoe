@@ -1,12 +1,16 @@
 package com.dstechsupport.game;
-import java.util.Scanner;
+import com.dstechsupport.game.*;
 
+import java.util.Scanner;
+import java.lang.*;
+import net.sf.json.JSONObject;
+import net.sf.json.JSONSerializer;
 
 public class Game 
 {
-	Board board;
-	Symbol currentPlayer;
-	GameState gameState;
+	public Board board;
+	public Symbol currentPlayer;
+	public GameState gameState;
 
 	public Game()
 	{
@@ -16,91 +20,67 @@ public class Game
 	}
 
 	//The main game loop
-	public void play()
+	public JSONObject play( int row, int column )
 	{
-		//draw initial board
-		board.drawBoard();
 
 		//game loop
-		while( gameState == GameState.PLAYING  )
+		//have current player make a move
+		boolean success = makeMove( currentPlayer, row, column );
+
+		//draw the board
+		board.drawBoard();
+
+		//update gamestate
+		updateGame( currentPlayer );
+
+
+		//switch player
+		if( currentPlayer == Symbol.CROSS )
 		{
-			//have current player make a move
-			makeMove( currentPlayer  );
-
-			//draw the board
-			board.drawBoard();
-
-			//update gamestate
-			updateGame( currentPlayer );
-
-			//output message if victory or draw has occured
-
-			if( gameState == GameState.DRAW )
-			{
-				System.out.println( "The game is drawn! Thanks for playing" );
-			}
-			else if( gameState == GameState.CROSS_WON  )
-			{
-				System.out.println( "Cross has won! Thanks for playing"  );
-			}
-			else if( gameState == GameState.CIRCLE_WON  )
-			{
-				System.out.println( "Circle has won! Thanks for playing"  );
-			}
-
-			//switch player
-			if( currentPlayer == Symbol.CROSS )
-			{
-				currentPlayer = Symbol.CIRCLE;
-			}
-			else
-			{
-				currentPlayer = Symbol.CROSS;
-			}
+			currentPlayer = Symbol.CIRCLE;
 		}
+		else
+		{
+			currentPlayer = Symbol.CROSS;
+		}
+
+		//json object to display the game
+		JSONObject data = new JSONObject();
+		data.put( "currentPlayer", currentPlayer );
+		data.put( "gameState", gameState );
+		data.put( "success", success );
+
+		return data;
+
 	}
 
 	//Take input from player and update the board
-	public void makeMove( Symbol player )
+	//updates the cell and returns true if the cell is empty
+	//returns false otherwise
+	public boolean makeMove( Symbol player, int chosenRow, int chosenColumn )
 	{
-		int chosenRow = 0;
-		int chosenColumn = 0;
-		boolean wrongInput = true;
-		Scanner in = new Scanner(System.in);
-		do
+		//Checking if the user input is correct and if the cell he picked is available
+		if( chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2 )
 		{
-			if(player == Symbol.CIRCLE)
-			{
-				System.out.println("CIRCLE´S TURN");
+			return false;
+		}
+		else if( !( board.cells[chosenRow][chosenColumn].content == Symbol.EMPTY ) )
+		{
+			return false;
+		}
+		else
+		{
+			if( currentPlayer == Symbol.CROSS )
+			{ 
+				board.updateCell( chosenRow, chosenColumn, Symbol.CROSS  );
 			}
 			else
 			{
-				System.out.println("CROSS' TURN");
+				board.updateCell(chosenRow,chosenColumn, Symbol.CIRCLE );
 			}
+			return true;
+		}
 
-			System.out.print("Select row first, column second\n");
-			System.out.print("Row: ");
-			chosenRow = in.nextInt() - 1;
-			System.out.print("Column: ");
-			chosenColumn = in.nextInt() - 1;
-			System.out.println();
-
-			//Checking if the user input is correct and if the cell he picked is available
-			if( chosenRow < 0 || chosenRow > 2 || chosenColumn < 0 || chosenColumn > 2 )
-			{
-				System.out.println("Row or column input illegal, must be between 1 and 3. Try again.");
-			}
-			else if( !( board.cells[chosenRow][chosenColumn].content == Symbol.EMPTY ) )
-			{
-				System.out.println( "The cell you chose already contains a symbol, please select another." );
-			}
-			else
-			{
-				board.cells[chosenRow][chosenColumn].content = player; //Update the cell
-                                wrongInput = false;
-			}
-
-		}while(wrongInput == true);
 	}
 
 	//Check for win/draw conditions and update the gamestate
