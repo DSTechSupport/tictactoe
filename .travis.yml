@@ -10,16 +10,3 @@ deploy:
   app: pacific-castle-1001
   on:
     repo: DSTechSupport/tictactoe
-
-before_install:
-          - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-          - git remote add heroku git@heroku.com:pacific-castle-1001.git
-          - echo "Host heroku.com" >> ~/.ssh/config
-          - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-          - echo "   CheckHostIP no" >> ~/.ssh/config
-          - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-          - heroku keys:clear
-          - yes | heroku keys:add
-          - yes | git push -f heroku master
-script:
-  - sh bin/heroku_auth
