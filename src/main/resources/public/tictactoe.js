@@ -17,6 +17,7 @@ $(document).ready(function() {
 			//draw the current player
 			if( results[0] == 'done' )
 			{
+				alert( "filling cell" );
 				$(this).html( currentPlayer );
 				currentPlayer = results[1];
 			}
