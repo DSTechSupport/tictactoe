@@ -18,16 +18,30 @@ $(document).ready(function() {
 			//draw the current player
 			if( results[0] == 'done' )
 			{
-				alert( "filling cell" );
+				console.log( "filling cell" );
 				$( cell ).children().html( currentPlayer );
 				currentPlayer = results[1];
 			}
 			else
 			{
-				alert( "you fucked up" );
+				console.log( "illegal move" );
 			}
-			
 
+			if( results[3] != "playing" )
+			{
+				if( results[3] == "xwins" )
+				{
+					alert( "CROSS WINS" );
+				}
+				else if( results[3] == "owins" )
+				{
+					alert( "CIRCLE WINS" );
+				}
+				else if( results[3] == "draw" )
+				{
+					alert( "GAME IS DRAWN" );
+				}
+			}
 		});
 		
 	});
