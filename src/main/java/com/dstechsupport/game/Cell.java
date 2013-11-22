@@ -1,6 +1,12 @@
 package com.dstechsupport.game;
 import com.dstechsupport.game.*;
 
+/*
+*
+* Class that updates the cells in tictactoe
+*
+*/
+
 public class Cell
 {
 	public Symbol content;
