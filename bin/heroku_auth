@@ -1,0 +1,4 @@
+#!/bin/bash
+
+$heroku auth:login
+Email: johannl12@ru.is
