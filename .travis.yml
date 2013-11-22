@@ -13,7 +13,7 @@ deploy:
 
 before_install:
           - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-          - git remote add heroku git@heroku.com:pacific-castle-1001git
+          - git remote add heroku git@heroku.com:pacific-castle-1001.git
           - echo "Host heroku.com" >> ~/.ssh/config
           - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
           - echo "   CheckHostIP no" >> ~/.ssh/config
