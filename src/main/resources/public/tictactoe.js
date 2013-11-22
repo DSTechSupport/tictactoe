@@ -10,7 +10,7 @@ $(document).ready(function() {
           	url: "/play",
           	data: 'cell=' + cell
         	}).done( function( result ) {
-			alert( results );
+			alert( result );
 
 		});
 		
