@@ -10,7 +10,7 @@ import spark.*;
  */
 public class TicTacToe
 {
-	public static Game game = new Game();
+	public static Game game;
 
     	public static void main( String[] args )
     	{
@@ -18,7 +18,7 @@ public class TicTacToe
 
         	setPort(Integer.valueOf(System.getenv("PORT")));
 
-//      		game = new Game();
+      		game = new Game();
 
 		//this is called when a cell is clicked
         	post(new Route("/play") 
