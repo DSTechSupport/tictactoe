@@ -10,13 +10,15 @@ import spark.*;
  */
 public class TicTacToe
 {
+	public static Game game = new Game();
+
     	public static void main( String[] args )
     	{
 		staticFileLocation("/public");
 
         	setPort(Integer.valueOf(System.getenv("PORT")));
 
-      		Game game = new Game();
+//      		game = new Game();
 
 		//this is called when a cell is clicked
         	post(new Route("/play") 
@@ -25,19 +27,17 @@ public class TicTacToe
             		public Object handle(Request request, Response response) 
 			{
 				String element = request.queryParams("cell");
-				String s;
-				s = "" + element.charAt(4);
+				String s = "" + element.charAt(4);
 				int cellNumber = Integer.parseInt(s);
-                		return "hello " +  cellNumber;
-
-				// feed the co-ordinates of the cell that was clicked
-				// to the game instance			
+				int row = findRow( cellNumber );
+				int column = findColumn( cellNumber );
+				return game.play( row, column );	
             		}
         	});
        // System.out.println( "Welcome to this game of Tic Tac Toe!" );
     	}
 	// helper function to find the row of the cell
-	public int findRow( int cellNumber )
+	public static int findRow( int cellNumber )
 	{
         	if( cellNumber < 4 )
                	{
@@ -54,7 +54,7 @@ public class TicTacToe
 	}
 
 	// helper function to find the row of the cell
-	public int findColumn( int cellNumber )
+	public static int findColumn( int cellNumber )
 	{
 		if( ( cellNumber % 3 ) == 1 )
 		{
