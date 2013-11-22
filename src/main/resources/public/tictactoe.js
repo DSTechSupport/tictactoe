@@ -43,25 +43,26 @@ $(document).ready(function() {
 						alert( "GAME IS DRAWN" );
 					}
 				}
-			}
+		
+			});
 		}
 		// if the game has ended
-		else
-		{
-			if( results[3] == "xwins" )
-                       	{
-                        	alert( "CROSS WINS" );
-                       	}
-                       	else if( results[3] == "owins" )
-                       	{
+                else
+                {
+                        if( results[3] == "xwins" )
+                        {
+                                alert( "CROSS WINS" );
+                        }
+                        else if( results[3] == "owins" )
+                        {
                                 alert( "CIRCLE WINS" );
-                       	}
-                       	else if( results[3] == "draw" )
-                       	{
-                     	 	alert( "GAME IS DRAWN" );
-                      	}
-		}
-		});
+                        }
+                        else if( results[3] == "draw" )
+                        {
+                                alert( "GAME IS DRAWN" );
+                        }
+                }
+
 		
 	});
 });
