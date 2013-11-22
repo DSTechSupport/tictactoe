@@ -1,3 +1,6 @@
+var gameState = "playing";
+var currentPlayer = "cross";
+
 $(document).ready(function() {
 	$("#tictactoe tr td").click(function ()
 	{
@@ -7,10 +10,11 @@ $(document).ready(function() {
 			type: "POST",
 			url: "/play",
 			data: 'cell=' + cell
+			dataType: 'json'
         	}).done( function( data ) 
 		{
 			$('#cell').html( "12" );
-			alert( data );
+			alert( data[0].gameState );
         	});
 		
 	});

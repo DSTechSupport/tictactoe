@@ -1,4 +1,5 @@
 package com.dstechsupport.game;
+import com.dstechsupport.game.*;
 
 public class Board
 {
@@ -19,7 +20,7 @@ public class Board
 				}
 			}
 	}
-	
+
 	public void drawBoard()
 	{
 		System.out.println("    1   2   3");
