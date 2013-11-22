@@ -14,7 +14,7 @@ public class TicTacToeTest
 	{
 		TicTacToe tester = new TicTacToe();
 
-		int result = tester.findRow( 1 );
+		int result = TicTacToe.findRow( 1 );
 
 		assertEquals( "this is in row 1", 1, result );
 	}
@@ -23,7 +23,7 @@ public class TicTacToeTest
         {
                 TicTacToe tester = new TicTacToe();
 
-                int result = tester.findRow( 5 );
+                int result = TicTacToe.findRow( 5 );
 
                 assertEquals( "this is in row 2", 2, result );
         }
@@ -33,7 +33,7 @@ public class TicTacToeTest
         {
                 TicTacToe tester = new TicTacToe();
 
-                int result = tester.findRow( 9 );
+                int result = TicTacToe.findRow( 9 );
 
                 assertEquals( "this is in row 3", 3, result );
         }
@@ -43,7 +43,7 @@ public class TicTacToeTest
         {
                 TicTacToe tester = new TicTacToe();
 
-                int result = tester.findRow( 6 );
+                int result = TicTacToe.findRow( 6 );
 
                 assertEquals( "this is in row 2", 2, result );
         }
@@ -52,7 +52,7 @@ public class TicTacToeTest
         {
                 TicTacToe tester = new TicTacToe();
 
-                int result = tester.findColumn( 6 );
+                int result = TicTacToe.findColumn( 6 );
 
                 assertEquals( "this is in column 3", 3, result );
         }
@@ -61,7 +61,7 @@ public class TicTacToeTest
         {
                 TicTacToe tester = new TicTacToe();
 
-                int result = tester.findColumn( 7 );
+                int result = TicTacToe.findColumn( 7 );
 
                 assertEquals( "this is in column 1", 1, result );
         }
@@ -70,7 +70,7 @@ public class TicTacToeTest
         {
                 TicTacToe tester = new TicTacToe();
 
-                int result = tester.findColumn( 9 );
+                int result = TicTacToe.findColumn( 9 );
 
                 assertEquals( "this is in column 3", 3, result );
         }
@@ -79,7 +79,7 @@ public class TicTacToeTest
         {
                 TicTacToe tester = new TicTacToe();
 
-                int result = tester.findColumn( 2 );
+                int result = TicTacToe.findColumn( 2 );
 
                 assertEquals( "this is in column 2", 2, result );
         }
@@ -88,7 +88,7 @@ public class TicTacToeTest
         {
                 TicTacToe tester = new TicTacToe();
 
-                int result = tester.findColumn( 1 );
+                int result = TicTacToe.findColumn( 1 );
 
                 assertEquals( "this is in column 1", 1, result );
         }
