@@ -8,11 +8,10 @@ $(document).ready(function() {
 		{
 			var cell = this
 			var cellid =  $(this).attr( 'id' );
-			$.ajax({
+			$.ajax( {
 	       	   	type: "post",
 	          	url: "/play",
-	          	data: 'cell=' + cellid
-	        	}).done( function( data ) {
+	          	data: 'cell=' + cell } ).done( function( data ) {
 				alert( data );
 				var results = data.split(",");
 	
@@ -45,23 +44,23 @@ $(document).ready(function() {
 					}
 				}
 			}
-			// if the game has ended
-			else
-			{
-				if( results[3] == "xwins" )
-                                {
-                                        alert( "CROSS WINS" );
-                                }
-                                else if( results[3] == "owins" )
-                                {
-                                        alert( "CIRCLE WINS" );
-                                }
-                                else if( results[3] == "draw" )
-                                {
-                                        alert( "GAME IS DRAWN" );
-                                }
-
-			}
+		}
+		// if the game has ended
+		else
+		{
+			if( results[3] == "xwins" )
+                       	{
+                        	alert( "CROSS WINS" );
+                       	}
+                       	else if( results[3] == "owins" )
+                       	{
+                                alert( "CIRCLE WINS" );
+                       	}
+                       	else if( results[3] == "draw" )
+                       	{
+                     	 	alert( "GAME IS DRAWN" );
+                      	}
+		}
 		});
 		
 	});
