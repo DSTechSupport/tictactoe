@@ -20,8 +20,10 @@ public class Game
 	}
 
 	//The main game loop
-	public JSONObject play( int row, int column )
+	public String play( int row, int column )
 	{
+		StringBuilder data = new StringBuilder();
+
 		//game loop
 		//have current player make a move
 		boolean success = makeMove( currentPlayer, row, column );
@@ -34,24 +36,48 @@ public class Game
 
 
 		//switch player
+		//append if move is successful and current player to string
 		if( success )
 		{
+			data.append( "done" );
 			if( currentPlayer == Symbol.CROSS )
 			{
 				currentPlayer = Symbol.CIRCLE;
+				data.append( ",O" );
 			}
 			else
 			{
 				currentPlayer = Symbol.CROSS;
+				data.append( ",X" );
 			}
 		}
-		//json object to display the game
-		JSONObject data = new JSONObject();
-		data.put( "currentPlayer", currentPlayer );
-		data.put( "gameState", gameState );
-		data.put( "success", success );
+		else
+		{
+			data.append( "not,E" );
+		}
 
-		return data;
+		//append gamestate to string
+		if( gameState == GameState.PLAYING )
+		{
+			data.append( ",playing" );
+		}
+		else if( gameState == GameState.CROSS_WON )
+		{
+			data.append( ",xwins" );
+		}
+		else if( gameState == GameState.CIRCLE_WON )
+                {
+                        data.append( ",owins" );
+                }
+		else //( gameState == GameState.DRAW )
+                {
+                        data.append( ",draw" );
+                }
+
+
+		//json object to display the game
+
+		return data.toString();
 	}
 
 	//Take input from player and update the board
