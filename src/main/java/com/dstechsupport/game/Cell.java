@@ -1,4 +1,5 @@
 package com.dstechsupport.game;
+import com.dstechsupport.game.*;
 
 public class Cell
 {
@@ -17,7 +18,7 @@ public class Cell
 	{
 	    content = newSymbol;
 	}
-	
+
 	public void draw()
 	{
 		if( content  == Symbol.CIRCLE )
