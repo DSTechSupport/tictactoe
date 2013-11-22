@@ -16,10 +16,12 @@ import junit.framework.TestSuite;
 
 public class GameTest extends TestCase
 {
-
-	/*public void testPlay()
+	/*
+	public void testPlay()
 	{
 		Game lol = new Game();
+
+
 		JSONObject result = new JSONObject();
 		result  = lol.Play( 2, 2 );
 
@@ -44,7 +46,9 @@ public class GameTest extends TestCase
 	{
 		Game tester = new Game();
 
-		assertFalse( tester.makeMove( Symbol.CIRCLE, 2, 2 )  );
+		boolean result = tester.makeMove( Symbol.CIRCLE, 2, 2 );
+
+		assertTrue( result  );
 	}
 	//tests current player making a move
         public void testMakeMove2()
