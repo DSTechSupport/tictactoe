@@ -20,10 +20,10 @@ Notast skal við Linux. Ef viðkomandi er ekki með linux uppsett getur hann not
 
 3. Sækja Maven og Java og velja rétt environment
 Í skelinni sjálfri þarf að framkvæma eftirfarandi skipanir sem setja upp forrit sem nauðsynleg eru til að geta keyrt verkefnið: 
-- sudo apt-get install git (setur upp git á skelinni)
-- sudo apt-get install maven (setur upp maven á skelinni)
-- sudo apt-get install openjdk-7-jdk (setur upp Java JDK version 7)
-- sudo apt-get install openjdk-7-jre (setur upp Java JDK version /)
+ - sudo apt-get install git (setur upp git á skelinni)
+ - sudo apt-get install maven (setur upp maven á skelinni)
+ - sudo apt-get install openjdk-7-jdk (setur upp Java JDK version 7)
+ - sudo apt-get install openjdk-7-jre (setur upp Java JDK version /)
 
 Athugið mikilvægt er að velja rétt runtime environment eða java-7-openjdk útgáfuna þetta er gert með eftirfarandi skipun: 
 sudo update-alternatives --config java
@@ -40,11 +40,11 @@ Integration serverinn er 46.149.19.76 og user/pass er build/silver mundu að lá
 
 Forritunarreglur
 Hópurinn setti sér ákveðnar forritunarreglur sem ákveðnar voru í sameiningu og ætlast er til þeim sé fylgt eftir.
-- Skrifa skal allan kóða á ensku, þar með talið falla-, klasa og breytuheiti.
-- Athugasemdir í kóðanum skulu einnig vera ritaðar á ensku.
-- Notast skal við camelCasing fyrir öllu breytunöfn að undanskildum KlasaNöfnum.
-- Allir fastar (Constantar) skulu skrifaðir með hástöfum.
-- Föll og klasanöfn skulu vera lýsandi með tilliti til virkni þeirra.
-- Svigar upp við statement skulu hafa bil við sitthvoran sviga. Dæmi MyFunction( x, y ).
-- Allur kóði skal vera indentaður á sambærilega og skýran hátt.
+ - Skrifa skal allan kóða á ensku, þar með talið falla-, klasa og breytuheiti.
+ - Athugasemdir í kóðanum skulu einnig vera ritaðar á ensku.
+ - Notast skal við camelCasing fyrir öllu breytunöfn að undanskildum KlasaNöfnum.
+ - Allir fastar (Constantar) skulu skrifaðir með hástöfum.
+ - Föll og klasanöfn skulu vera lýsandi með tilliti til virkni þeirra.
+ - Svigar upp við statement skulu hafa bil við sitthvoran sviga. Dæmi MyFunction( x, y ).
+ - Allur kóði skal vera indentaður á sambærilega og skýran hátt.
 
