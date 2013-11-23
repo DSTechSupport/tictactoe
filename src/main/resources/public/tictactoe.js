@@ -30,23 +30,23 @@ $(document).ready(function() {
                                 console.log( "illegal move" );
                         }
 
-                        if( results[3] != "playing" )
+                        if( results[2] != "playing" )
                         {
-                                if( results[3] == "xwins" )
+                                if( results[2] == "xwins" )
                                 {
                                         alert( "CROSS WINS" );
                                 }
-                                else if( results[3] == "owins" )
+                                else if( results[2] == "owins" )
                                 {
                                         alert( "CIRCLE WINS" );
                                 }
-                                else if( results[3] == "draw" )
+                                else if( results[2] == "draw" )
                                 {
                                         alert( "GAME IS DRAWN" );
                                 }
                         }
 			//update gamestate
-			gameState = results[3];
+			gameState = results[2];
 			console.log( gameState );
                 });
 		}
