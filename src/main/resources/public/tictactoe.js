@@ -4,6 +4,8 @@ var currentPlayer = "X";
 $(document).ready(function() {
         $( "#tictactoe tr td" ).click(function ()
         {
+		if( gameState == "playing" )
+		{
                 var cell = this
                 var cellid =  $(this).attr( 'id' );
                 $.ajax({
@@ -11,7 +13,7 @@ $(document).ready(function() {
                   url: "/play",
                   data: 'cell=' + cellid
                 }).done( function( data ) {
-                        alert( data );
+                        console.log( data );
                         var results = data.split(",");
 
                         //if the move happened
@@ -43,6 +45,7 @@ $(document).ready(function() {
                                 }
                         }
                 });
+		}
                 
         });
 
