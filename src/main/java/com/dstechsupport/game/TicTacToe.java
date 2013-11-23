@@ -3,11 +3,6 @@ package com.dstechsupport.game;
 import static spark.Spark.*;
 import spark.*;
 
-/**
- *
- * Hello world! Gary Busey
- *
- */
 public class TicTacToe
 {
 	public static Game game;
