@@ -2,12 +2,12 @@ var gameState = "playing";
 var currentPlayer = "X";
 
 $(document).ready(function() {
-        $("#tictactoe tr td").click(function ()
+        $( "#tictactoe tr td" ).click(function ()
         {
                 var cell = this
                 var cellid =  $(this).attr( 'id' );
                 $.ajax({
-                          type: "post",
+                  type: "post",
                   url: "/play",
                   data: 'cell=' + cellid
                 }).done( function( data ) {
@@ -45,4 +45,17 @@ $(document).ready(function() {
                 });
                 
         });
+	
+	$( "#newgame" ).click( function ()
+        {
+		 $.ajax({
+                  type: "get",
+                  url: "/newgame",
+                }).done( function(  )
+		{
+			alert( "success" );"
+			//clear cells
+		});
+	});
+
 });
