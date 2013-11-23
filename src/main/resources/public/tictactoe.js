@@ -2,17 +2,20 @@ var gameState = "playing";
 var currentPlayer = "X";
 
 $(document).ready(function() {
-        $("#tictactoe tr td").click(function ()
+        $( "#tictactoe tr td" ).click(function ()
         {
+		if( gameState == "playing" )
+		{
                 var cell = this
                 var cellid =  $(this).attr( 'id' );
                 $.ajax({
-                          type: "post",
+                  type: "post",
                   url: "/play",
                   data: 'cell=' + cellid
                 }).done( function( data ) {
-                        alert( data );
+                        console.log( data );
                         var results = data.split(",");
+			console.log( results);
 
                         //if the move happened
                         //draw the current player
@@ -27,22 +30,38 @@ $(document).ready(function() {
                                 console.log( "illegal move" );
                         }
 
-                        if( results[3] != "playing" )
+                        if( results[2] != "playing" )
                         {
-                                if( results[3] == "xwins" )
+                                if( results[2] == "xwins" )
                                 {
                                         alert( "CROSS WINS" );
                                 }
-                                else if( results[3] == "owins" )
+                                else if( results[2] == "owins" )
                                 {
                                         alert( "CIRCLE WINS" );
                                 }
-                                else if( results[3] == "draw" )
+                                else if( results[2] == "draw" )
                                 {
                                         alert( "GAME IS DRAWN" );
                                 }
                         }
+			//update gamestate
+			gameState = results[2];
+			console.log( gameState );
                 });
+		}
                 
+        });
+
+	$( "#newgame" ).click( function ()
+        {
+                $.ajax({
+                  type: "post",
+                  url: "/newgame",
+                  data: ""
+                }).done( function( data ) {
+                        alert( data );
+                                                
+                });                
         });
 });
