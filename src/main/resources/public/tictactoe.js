@@ -45,17 +45,16 @@ $(document).ready(function() {
                 });
                 
         });
-	
+
 	$( "#newgame" ).click( function ()
         {
-		 $.ajax({
-                  type: "get",
+                $.ajax({
+                  type: "post",
                   url: "/newgame",
-                }).done( function(  )
-		{
-			alert( "success" );"
-			//clear cells
-		});
-	});
-
+                  data: ""
+                }).done( function( data ) {
+                        alert( data );
+                                                
+                });                
+        });
 });
