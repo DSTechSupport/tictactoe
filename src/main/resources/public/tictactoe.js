@@ -47,6 +47,7 @@ $(document).ready(function() {
                         }
 			//update gamestate
 			gameState = results[3];
+			console.log( gameState );
                 });
 		}
                 
