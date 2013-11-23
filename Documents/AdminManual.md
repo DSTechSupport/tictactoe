@@ -6,9 +6,9 @@ Fyrst þarftu að ná í git, setja upp ssh key og ná í heroku toolbelt
 
 Best er að fylgja þessum leiðbeiningum
 
-https://help.github.com/articles/set-up-git
-https://help.github.com/articles/generating-ssh-keys
-https://devcenter.heroku.com/articles/quickstart
+ - https://help.github.com/articles/set-up-git
+ - https://help.github.com/articles/generating-ssh-keys
+ - https://devcenter.heroku.com/articles/quickstart
 
 2. Ná í og deploya
 ====
