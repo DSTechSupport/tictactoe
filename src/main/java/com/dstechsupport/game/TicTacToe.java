@@ -21,7 +21,7 @@ public class TicTacToe
       		game = new Game();
 
 		//this is called when a cell is clicked
-        	post(new Route("/play") 
+        	post(new Route( "/play" ) 
 		{
             		@Override
             		public Object handle(Request request, Response response) 
@@ -34,6 +34,16 @@ public class TicTacToe
 				return game.play( row, column );	
             		}
         	});
+
+		post(new Route( "/newgame" )
+                {
+                        @Override
+                        public Object handle(Request request, Response response)
+                        {
+				game = new Game();
+                        }
+                });
+
        // System.out.println( "Welcome to this game of Tic Tac Toe!" );
     	}
 	// helper function to find the row of the cell
