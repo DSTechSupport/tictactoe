@@ -7,7 +7,7 @@ Eftirfarandi forrit eru nauðsynleg til að keyra þetta verkefni:
 
 Til þess að setja upp verkefni á uppsettri ubuntu vél. Þarf að fylgja eftirfarandi skrefum:
 
-1. Uppsetning á Git.
+1. Uppsetning á Git
 Fyrsta skrefið er að heimsækja slóðina https://github.com/join og búa til aðgang að github ef þú ert ekki nú þegar með svoleiðis aðgang. Því næst þarf að bæta notandanum í rétt “Organization” sem í þessu tilfelli er þróunarteymið Deep Space Tech Support. Stofnandi af “Organization” þarf að samþykkja þig inn í hópinn. Þetta er gert til þess að allir meðlimir hópsins hafi aðgang að sama Repository. 
 
 Frekari upplýsingar um uppsetningu á Git má nálgast í eftirfarandi hlekk: https://help.github.com/articles/set-up-git
