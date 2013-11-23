@@ -14,14 +14,14 @@ https://devcenter.heroku.com/articles/quickstart
 ====
 Síðan þarftu að sækja repository-ið með
 
--git pull http://github.com/DSTechSupport/tictactoe
+ - git pull http://github.com/DSTechSupport/tictactoe
 færa þig síðann í directory-ið sem git sótti
--cd tictactoe/
+ - cd tictactoe/
 og færa það á heroku serverinn þinn með 
--git push heroku master
+ - git push heroku master
 
 3. Maintainance
 ====
 Ef þú þarft að sækja nýja útgáfu og uppfæra á servernum þínum þá þarftu að vera í tictactoe/ directory og keyra eftirfarandi:
--git pull
--git push heroku master
+ - git pull
+ - git push heroku master
