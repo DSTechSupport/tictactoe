@@ -29,12 +29,11 @@ Notast skal við Linux. Ef viðkomandi er ekki með linux uppsett getur hann not
 3. Sækja Maven og Java og velja rétt environment
 ====
 
-Í skelinni sjálfri þarf að framkvæma eftirfarandi skipanir sem setja upp forrit sem nauðsynleg eru til að geta keyrt verkefnið: 
-
- - sudo apt-get install git (setur upp git á skelinni)
- - sudo apt-get install maven (setur upp maven á skelinni)
- - sudo apt-get install openjdk-7-jdk (setur upp Java JDK version 7)
- - sudo apt-get install openjdk-7-jre (setur upp Java JDK version /)
+- Í skelinni sjálfri þarf að framkvæma eftirfarandi skipanir sem setja upp forrit sem nauðsynleg eru til að geta keyrt verkefnið: 
+   sudo apt-get install git (setur upp git á skelinni)
+   sudo apt-get install maven (setur upp maven á skelinni)
+   sudo apt-get install openjdk-7-jdk (setur upp Java JDK version 7)
+   sudo apt-get install openjdk-7-jre (setur upp Java JDK version /)
 
 Athugið mikilvægt er að velja rétt runtime environment eða java-7-openjdk útgáfuna þetta er gert með eftirfarandi skipun: 
 sudo update-alternatives --config java
