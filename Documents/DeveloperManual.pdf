@@ -1,5 +1,3 @@
-Developer Manual
-----------------
 Development Manual
 Þróunarhandbók þessi er ætluð til þess að lýsa hvað þarf til að keyra eftirfarandi verkefni á ný uppsettri vél. 
 Eftirfarandi forrit eru nauðsynleg til að keyra þetta verkefni:
