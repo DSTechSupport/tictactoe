@@ -24,7 +24,7 @@ https://help.github.com/articles/generating-ssh-keys
 2. Stýrikerfi
 ====
 
-Notast skal við Linux. Ef viðkomandi er ekki með linux uppsett getur hann notast við þjónustu sem www.greencloud.com bjóða og unnið í gegnum skel.
+Notast skal við Linux. Ef viðkomandi er ekki með linux uppsett getur hann notast við þjónustu sem www.greenqloud.com bjóða og unnið í gegnum skel.
 
 3. Sækja Maven og Java og velja rétt environment
 ====
@@ -48,7 +48,11 @@ sudo update-alternatives --config java
 
 Þá geturðu byrjað að vinna.
 
+Scriptan bin/build compilar kóðann og keyrir öll unit tests. Ef þú vilt bara compila þá geturðu notað bin/compile
+
 Integration serverinn er 46.149.19.76 og user/pass er build/silver mundu að láta alla vita ef þú þarft að integrata!
+Athugið að nú er virkur continuous code integration server á https://travis-ci.org/ skráðu þig inn þar með github og þá færðu að sjá buildin sem hann keyrir
+Ef þú vilt þá geturðu samt skráð þig inn á gamla code integration serverinn.
 
 Forritunarreglur
 ====
