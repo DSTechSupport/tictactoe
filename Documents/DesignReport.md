@@ -1,4 +1,3 @@
-
 23. nóvember 2013
 Kennari: Hannes Pétursson
 
