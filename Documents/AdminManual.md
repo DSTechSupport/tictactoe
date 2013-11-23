@@ -19,7 +19,9 @@ Síðan þarftu að sækja repository-ið með
 færa þig síðann í directory-ið sem git sótti
 
  - cd tictactoe/
+
 og færa það á heroku serverinn þinn með 
+
  - git push heroku master
 
 3. Maintainance
