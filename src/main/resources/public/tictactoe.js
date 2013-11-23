@@ -8,6 +8,7 @@ $(document).ready(function() {
 		{
                 var cell = this
                 var cellid =  $(this).attr( 'id' );
+		console.log( "sending cell: " + cellid );
                 $.ajax({
                   type: "post",
                   url: "/play",
@@ -62,6 +63,7 @@ $(document).ready(function() {
                   data: ""
                 }).done( function( data ) {
                         alert( data );
+			$( "#tictactoe tr td" ).children().html( "" );
                                                 
                 });                
         });
