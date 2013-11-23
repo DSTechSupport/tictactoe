@@ -41,6 +41,7 @@ public class TicTacToe
                         public Object handle(Request request, Response response)
                         {
 				game = new Game();
+				return "new game started";
                         }
                 });
 
