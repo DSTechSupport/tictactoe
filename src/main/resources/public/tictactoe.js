@@ -62,6 +62,8 @@ $(document).ready(function() {
                   url: "/newgame",
                   data: ""
                 }).done( function( data ) {
+			gameState = "playing";
+			currentPlayer = "X";
                         alert( data );
 			$( "#tictactoe tr td" ).children().html( "" );
                                                 
