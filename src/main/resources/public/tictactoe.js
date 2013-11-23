@@ -15,6 +15,7 @@ $(document).ready(function() {
                 }).done( function( data ) {
                         console.log( data );
                         var results = data.split(",");
+			console.log( results);
 
                         //if the move happened
                         //draw the current player
@@ -44,6 +45,8 @@ $(document).ready(function() {
                                         alert( "GAME IS DRAWN" );
                                 }
                         }
+			//update gamestate
+			gameState = results[3];
                 });
 		}
                 
